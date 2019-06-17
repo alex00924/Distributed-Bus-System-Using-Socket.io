@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:padding="10dp">
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_weight="9"
+                android:layout_height="match_parent"
+                android:background="@drawable/edit_shape"
+                android:id="@+id/txt_key"
+                android:lines="1"
+                android:padding="5dp"
+                android:hint="Insert Bus Line Number"
+                android:inputType="number"/>
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:background="@drawable/search_button"
+                android:src="@drawable/search"
+                android:padding="10dp"
+                android:id="@+id/btn_search"
+                />
+        </LinearLayout>
+        <fragment
+            xmlns:map="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="8"
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:padding="20dp"
+        android:orientation="vertical"
+        android:id="@+id/detail_view"
+        android:layout_alignParentBottom="true"
+        android:background="#fff"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/txt_Line"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Line : Line Description"
+            android:textSize="18dp"
+            android:layout_margin="5dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txt_Route"
+            android:text="Route Description"
+            android:textSize="18dp"
+            android:layout_margin="5dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txt_Time"
+            android:text="Time : xxx.xx.xx h-y-m"
+            android:textSize="18dp"
+            android:layout_margin="5dp"/>
+
+    </LinearLayout>
+</RelativeLayout>
+
